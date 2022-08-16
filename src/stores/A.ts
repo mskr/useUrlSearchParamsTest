@@ -6,6 +6,9 @@ const useA = defineStore('a', {
     params: useUrlSearchParams()
   }),
   actions: {
+    clear() {
+      delete this.params.a
+    },
     test() {
       this.params.a = 'test'
     }

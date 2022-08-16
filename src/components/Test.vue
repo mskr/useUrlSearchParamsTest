@@ -6,7 +6,13 @@ defineProps<{ msg: string }>()
 
 const count = ref(0)
 
-setTimeout(() => useB().test(), 200)
+setInterval(() => {
+  useB().clear()
+  useB().test()
+  if (Array.from(new URLSearchParams(window.location.search).entries()).length != 2) {
+    alert(new Error('Bug found').stack)
+  }
+}, 200)
 </script>
 
 <template>
