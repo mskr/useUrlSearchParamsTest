@@ -10,7 +10,7 @@ const useB = defineStore('b', {
       delete this.params.b
     },
     test() {
-      this.params.b = 'test'
+      this.params.b = 'testB'
     }
   }
 })
